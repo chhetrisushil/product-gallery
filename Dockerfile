@@ -1,7 +1,5 @@
-FROM archlinux/archlinux
+FROM node:12.18.1
+RUN mkdir /code
 WORKDIR /code
-COPY package.json /code/package.json
-COPY package-lock.json /code/package-lock.json
 RUN npm install
-COPY . /code
 CMD ["npm", "start"]

@@ -1,0 +1,26 @@
+{
+  "name": "product-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 3000 -c-1",
+    "docker-stop": "docker stop gallery",
+    "docker-build": "docker build -t product-gallery .",
+    "docker-run": "docker run --rm -v ${PWD}:/code -p 3000:3000 --name gallery product-gallery"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chhetrisushil/product-gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chhetrisushil/product-gallery/issues"
+  },
+  "homepage": "https://github.com/chhetrisushil/product-gallery#readme",
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}
